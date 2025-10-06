@@ -1,1 +1,40 @@
 @import "tailwindcss";
+
+@theme {
+  --color-text: #333333;
+
+  --font-cormorant-garamond: "Cormorant Garamond", serif;
+  --font-nunito-sans: "Nunito Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-cormorant-garamond);
+  color: var(--color-text);
+}
+
+.header-cta {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--color-text);
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.header-cta:hover::before {
+  width: 100%;
+}
+
+.header-cta:hover {
+  color: var(--color-white);
+  transition: all ease 0.4s;
+}
