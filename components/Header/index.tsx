@@ -39,8 +39,8 @@ const Header = () => {
     <>
       <MobileNav isMenuOpen={isMenuOpen} onToggle={handleToggleMenu} />
 
-      <header className="font-nunito-sans">
-        <div className="flex items-center justify-between px-5 md:px-8 lg:px-[100px] py-4">
+      <header className="font-nunito-sans animate-fade-in">
+        <div className="flex items-center justify-between px-5 md:px-8 lg:px-[100px] pt-4">
           <div>
             <Link href="/">
               <img

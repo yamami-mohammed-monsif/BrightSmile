@@ -11,7 +11,7 @@ const MobileNav = ({ isMenuOpen, onToggle }: MobileNavProps) => {
     <>
       {/* Dark overlay */}
       <div
-        className={`lg:hidden fixed inset-0 bg-black transition-opacity duration-300 ${
+        className={`lg:hidden fixed inset-0 bg-black transition-opacity duration-300 z-20 ${
           isMenuOpen ? "opacity-50" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => onToggle()}

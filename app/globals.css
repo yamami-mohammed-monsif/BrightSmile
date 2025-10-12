@@ -2,14 +2,45 @@
 
 @theme {
   --color-text: #333333;
+  --color-cta: #4db6ac;
+  --color-cta-hover: #3aa296;
 
   --font-cormorant-garamond: "Cormorant Garamond", serif;
   --font-nunito-sans: "Nunito Sans", sans-serif;
 }
 
-body {
-  font-family: var(--font-cormorant-garamond);
-  color: var(--color-text);
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-nunito-sans);
+    color: var(--color-text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-cormorant-garamond);
+    color: var(--color-text);
+  }
+
+  h1 {
+    @apply text-[2.5rem] md:text-5xl lg:text-7xl font-bold leading-11 lg:leading-[4.5rem] max-w-2xl;
+  }
 }
 
 .header-cta {
@@ -37,4 +68,57 @@ body {
 .header-cta:hover {
   color: var(--color-white);
   transition: all ease 0.4s;
+}
+
+.testimonial-images > div {
+  @apply aspect-square w-6 md:w-9 rounded-full object-cover overflow-hidden;
+}
+
+.testimonial-images div:not(:first-child) {
+  @apply -ml-[0.75rem] lg:-ml-[1rem];
+}
+
+.section-description {
+  @apply text-base md:text-lg font-normal leading-5 md:leading-6 text-text mt-4 md:mt-5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0; /* hidden by default */
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+.animate-delay-300 {
+  animation-delay: 0.3s;
 }
