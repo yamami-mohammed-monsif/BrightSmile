@@ -3,7 +3,7 @@
 import Section from "../UI/Section";
 import { TestimonialsData } from "@/constants";
 import TestimonialCard from "../UI/TestimonialCard";
-
+import useOnScreen from "@/hooks/useOnScreen";
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -14,12 +14,18 @@ import "swiper/css/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const Testimonials = () => {
+  const [sectionRef, isVisible] = useOnScreen({ threshold: 0.2 });
   return (
     <Section
       id="testimonials"
+      ref={sectionRef}
       className="grid grid-cols-1 gap-6 md:gap-10 lg:gap-16"
     >
-      <div>
+      <div
+        className={`transition-opacity duration-700 ${
+          isVisible ? "animate-fade-in" : "opacity-0"
+        }`}
+      >
         <h2>Trusted by over 1,000 patients to transform their smiles</h2>
         <p className="section-description max-w-96 md:max-w-[550px]">
           See why patients choose BrightSmile for Invisalign, whitening, and
@@ -38,7 +44,13 @@ const Testimonials = () => {
         </div>
 
         {/* Swiper Slider */}
-        <div className="relative">
+        <div
+          className={`transition-opacity duration-700 ${
+            isVisible
+              ? "animate-fade-in-up animate-delay-200"
+              : "opacity-0 translate-y-6"
+          }`}
+        >
           <Swiper
             modules={[Autoplay, Pagination, Navigation]}
             spaceBetween={24}
