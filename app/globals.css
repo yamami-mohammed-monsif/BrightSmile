@@ -4,6 +4,7 @@
   --color-text: #333333;
   --color-cta: #4db6ac;
   --color-cta-hover: #3aa296;
+  --color-light-grey: #f9f9f9;
 
   --font-cormorant-garamond: "Cormorant Garamond", serif;
   --font-nunito-sans: "Nunito Sans", sans-serif;
@@ -40,6 +41,10 @@
 
   h1 {
     @apply text-[2.5rem] md:text-5xl lg:text-7xl font-bold leading-11 lg:leading-[4.5rem] max-w-2xl;
+  }
+
+  h2 {
+    @apply text-3xl font-bold md:text-4xl lg:text-5xl leading-9 md:leading-10 lg:leading-[3.5rem] max-w-96 md:max-w-2xl;
   }
 }
 
@@ -121,4 +126,22 @@
 }
 .animate-delay-300 {
   animation-delay: 0.3s;
+}
+
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
+  @apply bg-text border-text;
+}
+.custom-swiper-button-prev:hover svg,
+.custom-swiper-button-next:hover svg {
+  @apply text-white;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet {
+  @apply w-1.5 h-1.5 rounded-full bg-text/20;
+  transition: all 0.3s ease;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+  @apply bg-text;
 }
