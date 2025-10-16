@@ -128,20 +128,40 @@
   animation-delay: 0.3s;
 }
 
-.custom-swiper-button-prev:hover,
-.custom-swiper-button-next:hover {
+/* Testimonials Swiper Buttons */
+.testimonials-swiper-button-prev:hover,
+.testimonials-swiper-button-next:hover {
   @apply bg-text border-text;
 }
-.custom-swiper-button-prev:hover svg,
-.custom-swiper-button-next:hover svg {
+.testimonials-swiper-button-prev:hover svg,
+.testimonials-swiper-button-next:hover svg {
   @apply text-white;
 }
 
-.custom-swiper-pagination .swiper-pagination-bullet {
-  @apply w-1.5 h-1.5 rounded-full bg-text/20;
-  transition: all 0.3s ease;
+/* BeforeAfters Swiper Buttons */
+.beforeafters-swiper-button-prev:hover,
+.beforeafters-swiper-button-next:hover {
+  @apply bg-text border-text;
+}
+.beforeafters-swiper-button-prev:hover svg,
+.beforeafters-swiper-button-next:hover svg {
+  @apply text-white;
 }
 
-.custom-swiper-pagination .swiper-pagination-bullet-active {
-  @apply bg-text;
+.swiper-pagination {
+  position: relative !important;
+}
+
+.swiper-pagination-bullet {
+  position: relative !important;
+  display: inline-block !important;
+  background-color: var(--color-text) !important;
+  opacity: 0.3 !important;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-text) !important;
+  opacity: 1 !important;
 }

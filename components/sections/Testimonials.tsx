@@ -4,6 +4,8 @@ import Section from "../UI/Section";
 import { TestimonialsData } from "@/constants";
 import TestimonialCard from "../UI/TestimonialCard";
 import useOnScreen from "@/hooks/useOnScreen";
+import { useRef } from "react";
+
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -15,6 +17,11 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const Testimonials = () => {
   const [sectionRef, isVisible] = useOnScreen({ threshold: 0.2 });
+
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const paginationRef = useRef(null);
+
   return (
     <Section
       id="testimonials"
@@ -34,7 +41,13 @@ const Testimonials = () => {
       </div>
 
       <div>
-        <div className="flex items-center gap-1.5 mb-6">
+        <div
+          className={`flex items-center gap-1.5 mb-6 transition-opacity duration-700 ${
+            isVisible
+              ? "animate-fade-in-up animate-delay-200"
+              : "opacity-0 translate-y-6"
+          }`}
+        >
           <img
             src="/five-stars.png"
             alt="5 stars rating"
@@ -47,7 +60,7 @@ const Testimonials = () => {
         <div
           className={`transition-opacity duration-700 ${
             isVisible
-              ? "animate-fade-in-up animate-delay-200"
+              ? "animate-fade-in-up animate-delay-400"
               : "opacity-0 translate-y-6"
           }`}
         >
@@ -61,11 +74,12 @@ const Testimonials = () => {
             }}
             pagination={{
               clickable: true,
-              el: ".custom-swiper-pagination", // ← Custom dot container
+              type: "bullets",
+              el: ".testimonials-pagination", // Use a class selector instead
             }}
             navigation={{
-              prevEl: ".custom-swiper-button-prev",
-              nextEl: ".custom-swiper-button-next",
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
             }}
             breakpoints={{
               768: {
@@ -85,23 +99,21 @@ const Testimonials = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* Custom Controls: Dots on LEFT, Arrows on RIGHT */}
-          <div className="flex justify-between items-center mt-8">
-            {/* Pagination Dots */}
-            <div className="custom-swiper-pagination flex space-x-2"></div>
-
+          <div className="flex items-center justify-between mt-6 md:mt-8">
+            <div ref={paginationRef} className="testimonials-pagination" />
             {/* Navigation Arrows */}
             <div className="flex space-x-3">
               <button
-                className="custom-swiper-button-prev flex items-center justify-center w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-white border cursor-pointer"
-                aria-label="Previous testimonial"
+                ref={prevRef}
+                className="testimonials-swiper-button-prev flex items-center justify-center w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-white border cursor-pointer"
+                aria-label="Previous before/after"
               >
                 <ArrowLeft className="text-text" size={24} />
               </button>
               <button
-                className="custom-swiper-button-next flex items-center justify-center w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-white border cursor-pointer"
-                aria-label="Next testimonial"
+                ref={nextRef}
+                className="testimonials-swiper-button-next flex items-center justify-center w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-white border cursor-pointer"
+                aria-label="Next before/after"
               >
                 <ArrowRight className="text-text" size={24} />
               </button>

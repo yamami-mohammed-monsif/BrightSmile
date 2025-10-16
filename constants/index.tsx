@@ -63,3 +63,21 @@ export const TestimonialsData = [
       "From the moment I walked in, I felt cared for. The team is attentive and truly listens to your concerns. Highly recommend!",
   },
 ];
+
+export const BeforeAfterData = [
+  {
+    id: 1,
+    src: "/beforeafter1.png",
+    alt: "Before and after treatment image 1",
+  },
+  {
+    id: 2,
+    src: "/beforeafter2.png",
+    alt: "Before and after treatment image 2",
+  },
+  {
+    id: 3,
+    src: "/beforeafter3.png",
+    alt: "Before and after treatment image 3",
+  },
+];
