@@ -81,3 +81,29 @@ export const BeforeAfterData = [
     alt: "Before and after treatment image 3",
   },
 ];
+
+export const BenefitsData = [
+  {
+    id: 1,
+    title: "Boosted Confidence",
+    description:
+      "Feel proud to smile in photos, at work, and in everyday life.",
+  },
+  {
+    id: 2,
+    title: "Better First Impressions",
+    description: "Stand out in interviews, meetings, and social situations.",
+  },
+  {
+    id: 3,
+    title: "Stress-Free Visits",
+    description:
+      "Relax in our calming environment with sedation options available.",
+  },
+  {
+    id: 4,
+    title: "Long-Term Oral Health",
+    description:
+      "Protect your teeth and gums while improving your overall well-being.",
+  },
+];

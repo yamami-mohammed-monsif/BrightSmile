@@ -47,6 +47,10 @@
   h2 {
     @apply text-3xl font-bold md:text-4xl lg:text-5xl leading-9 md:leading-10 lg:leading-[3.5rem] max-w-96 md:max-w-2xl;
   }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-bold leading-8 md:leading-9 max-w-lg;
+  }
 }
 
 .header-cta {
