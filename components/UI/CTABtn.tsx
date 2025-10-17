@@ -5,7 +5,7 @@ interface CTAProps {
   className?: string;
 }
 
-const CTA = ({ children, className }: CTAProps) => {
+const CTABtn = ({ children, className }: CTAProps) => {
   return (
     <div className="flex items-center group">
       {" "}
@@ -24,4 +24,4 @@ const CTA = ({ children, className }: CTAProps) => {
   );
 };
 
-export default CTA;
+export default CTABtn;

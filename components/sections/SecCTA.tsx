@@ -1,7 +1,7 @@
 "use client";
 
 import Section from "../UI/Section";
-import CTA from "../UI/CTA";
+import CTABtn from "../UI/CTABtn";
 import useOnScreen from "@/hooks/useOnScreen";
 
 const SecCTA = () => {
@@ -29,7 +29,7 @@ const SecCTA = () => {
               : "opacity-0 translate-y-6"
           }`}
         >
-          <CTA>Book Your Free Smile Consultation Now</CTA>
+          <CTABtn>Book Your Free Smile Consultation Now</CTABtn>
         </div>
       </div>
     </Section>

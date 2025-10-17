@@ -1,5 +1,5 @@
 import Section from "../UI/Section";
-import CTA from "../UI/CTA";
+import CTABtn from "../UI/CTABtn";
 import Image from "next/image";
 
 const Hero = () => {
@@ -74,7 +74,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="mt-8 animate-fade-in-up animate-delay-200">
-          <CTA>Book Your Free Smile Consultation Today</CTA>
+          <CTABtn>Book Your Free Smile Consultation Today</CTABtn>
           <div className="flex items-center justify-between mt-4 md:mt-6 lg:mt-12 max-w-2xl animate-fade-in-up animate-delay-300">
             <div className="w-[100px] h-10 lg:w-[150px] lg:h-14">
               <Image
