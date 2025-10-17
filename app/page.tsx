@@ -4,6 +4,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import BeforeAfters from "@/components/sections/BeforeAfters";
 import SecCTA from "@/components/sections/SecCTA";
 import Benefits from "@/components/sections/Benefits";
+import Process from "@/components/sections/Process";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <BeforeAfters />
       <SecCTA />
       <Benefits />
+      <Process />
     </>
   );
 }

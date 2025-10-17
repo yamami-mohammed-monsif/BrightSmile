@@ -107,3 +107,24 @@ export const BenefitsData = [
       "Protect your teeth and gums while improving your overall well-being.",
   },
 ];
+
+export const Steps = [
+  {
+    id: 1,
+    title: "Book Your Free Consultation",
+    description:
+      "Choose a time that works best for you. it only takes 30 seconds.",
+  },
+  {
+    id: 2,
+    title: "Visit Our Clinic",
+    description:
+      "Come in for a warm, friendly consultation. We’ll answer your questions and design your treatment plan.",
+  },
+  {
+    id: 3,
+    title: "Start Your Smile Journey",
+    description:
+      "Begin treatment with confidence and enjoy the results that last.",
+  },
+];
