@@ -4,20 +4,26 @@ import Section from "../UI/Section";
 import { FAQData } from "@/constants";
 import FAQItem from "../UI/FAQItem";
 import { useState } from "react";
-import CTA from "../UI/CTA";
+import CTABtn from "../UI/CTABtn";
+import useOnScreen from "@/hooks/useOnScreen";
 
 const FAQs = () => {
   const [openId, setOpenId] = useState<number | null>(null);
+  const [sectionRef, isVisible] = useOnScreen({ threshold: 0.15 });
 
   const handleToggle = (id: number) => {
     setOpenId((prev: number | null) => (prev === id ? null : id));
   };
 
   return (
-    <Section>
-      <div className="mb-6 md:mb-8 lg:mb-10">
+    <Section ref={sectionRef}>
+      <div
+        className={`mb-6 md:mb-8 lg:mb-10 transition-opacity duration-700 ${
+          isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-6"
+        }`}
+      >
         <h2>Got questions? We’ve got answers.</h2>
-        <p className="section-description">
+        <p className="section-description max-w-xl">
           From costs to comfort, here are the most common questions patients ask
           before starting their smile journey.
         </p>
@@ -36,7 +42,7 @@ const FAQs = () => {
       <div className="mt-6 md:mt-8 lg:mt-10">
         <h3 className="mb-6">Still have questions?</h3>
         <div>
-          <CTA>Book Your Free Smile Consultation Today</CTA>
+          <CTABtn>Book Your Free Smile Consultation Today</CTABtn>
         </div>
       </div>
     </Section>
