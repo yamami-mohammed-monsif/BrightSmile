@@ -128,3 +128,36 @@ export const Steps = [
       "Begin treatment with confidence and enjoy the results that last.",
   },
 ];
+
+export const FAQData = [
+  {
+    id: 1,
+    question: "Does cosmetic dentistry hurt?",
+    answer:
+      "Not at all. Modern techniques and gentle care mean most treatments are completely pain-free. Dr. Sarah always ensures you feel relaxed and comfortable",
+  },
+  {
+    id: 2,
+    question: "How much does it cost?",
+    answer:
+      "It depends on your treatment plan, but we’ll give you a clear estimate upfront. Many patients are surprised by how affordable a confident smile can be.",
+  },
+  {
+    id: 3,
+    question: "How long does treatment take?",
+    answer:
+      "Some treatments (like whitening) can be done in one visit. Others, like aligners or veneers, take a few weeks to months. We’ll guide you step by step.",
+  },
+  {
+    id: 4,
+    question: " Will my insurance cover this?",
+    answer:
+      "It depends on your provider. While most cosmetic procedures aren’t fully covered, we’ll help you check your benefits and explore flexible payment options.",
+  },
+  {
+    id: 5,
+    question: "What if I’m nervous about going to the dentist?",
+    answer:
+      "That’s completely normal. Dr. Sarah specializes in creating a calming experience, taking extra time to explain everything so you always feel at ease.",
+  },
+];

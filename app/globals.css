@@ -52,6 +52,10 @@
   h3 {
     @apply text-2xl md:text-3xl font-bold leading-8 md:leading-9 max-w-lg;
   }
+
+  h4 {
+    @apply text-xl md:text-2xl font-bold leading-7 md:leading-8;
+  }
 }
 
 .header-cta {
