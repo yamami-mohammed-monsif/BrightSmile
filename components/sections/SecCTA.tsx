@@ -10,7 +10,7 @@ const SecCTA = () => {
     <Section ref={sectionRef} className="bg-secondary">
       <div className="flex flex-col items-center text-center">
         <div
-          className={`transition-opacity duration-700 ${
+          className={`flex flex-col items-center transition-opacity duration-700 ${
             isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-6"
           }`}
         >
@@ -23,7 +23,7 @@ const SecCTA = () => {
           </p>
         </div>
         <div
-          className={`mt-10 lg:mt-11 transition-opacity duration-700 ${
+          className={`w-full md:w-auto mt-10 lg:mt-11 transition-opacity duration-700 ${
             isVisible
               ? "animate-fade-in-up animate-delay-200"
               : "opacity-0 translate-y-6"

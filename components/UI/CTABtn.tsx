@@ -7,9 +7,9 @@ interface CTAProps {
 
 const CTABtn = ({ children, className }: CTAProps) => {
   return (
-    <div className="flex items-center group hover:scale-105 transition-transform duration-300 ease-in-out">
+    <div className="flex items-center group hover:scale-105 transition-transform duration-300 ease-in-out w-full md:w-auto">
       <button
-        className={`${className} hero-cta flex items-center px-5 lg:px-6 py-3 rounded-full cursor-pointer`}
+        className={`${className} w-full md:w-auto hero-cta flex items-center justify-center px-5 lg:px-6 py-3 rounded-full cursor-pointer`}
       >
         {children}
       </button>

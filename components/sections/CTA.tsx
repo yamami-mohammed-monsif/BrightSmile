@@ -4,13 +4,13 @@ import Image from "next/image";
 
 const CTA = () => {
   return (
-    <Section className="bg-primary max-w-7xl mx-auto md:rounded-4xl relative">
+    <Section className="bg-primary max-w-7xl mx-auto md:rounded-4xl relative md:mb-20 lg:mb-[100px]">
       <div className="flex flex-col gap-3 md:flex-row items-center">
         <div>
           <h2 className="mb-4 max-w-lg">
             Your dream smile is just one click away
           </h2>
-          <p className="section-description max-w-md">
+          <p className="section-description max-w-md text-center">
             Join 1,000+ happy patients who trusted BrightSmile and start your
             journey today.
           </p>
