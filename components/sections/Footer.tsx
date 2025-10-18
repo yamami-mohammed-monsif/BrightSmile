@@ -19,10 +19,10 @@ const Footer = () => {
             <p className="text-sm">info@yourclinic.com</p>
           </div>
           <div className="flex items-center gap-3">
-            <img src="/facebook.svg" alt="facebook" />
-            <img src="/instagram.svg" alt="instagram" />
+            <img src="/Facebook.svg" alt="facebook" />
+            <img src="/Instagram.svg" alt="instagram" />
             <img src="/X.svg" alt="X" />
-            <img src="/linkedin.svg" alt="linkedin" />
+            <img src="/LinkedIn.svg" alt="linkedin" />
           </div>
         </div>
         <div className="flex flex-col gap-5">
