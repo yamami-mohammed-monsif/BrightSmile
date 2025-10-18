@@ -173,6 +173,7 @@
 
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
+  will-change: opacity, transform; /* GPU acceleration hint */
 }
 
 @keyframes fadeInUp {
@@ -188,7 +189,13 @@
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
-  opacity: 0; /* hidden by default */
+  opacity: 0;
+  will-change: opacity, transform; /* GPU acceleration */
+}
+
+.animate-fade-in-up.animation-complete,
+.animate-fade-in.animation-complete {
+  will-change: auto;
 }
 
 .animate-delay-100 {
@@ -199,6 +206,24 @@
 }
 .animate-delay-300 {
   animation-delay: 0.3s;
+}
+
+/* Reduce animation on mobile for better performance */
+@media (max-width: 768px) {
+  .animate-fade-in,
+  .animate-fade-in-up {
+    animation-duration: 0.4s; /* Faster on mobile */
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-in-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Testimonials Swiper Buttons */
