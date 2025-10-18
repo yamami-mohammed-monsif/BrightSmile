@@ -117,6 +117,9 @@ const Hero = () => {
           height={700}
           className="w-full max-w-lg h-auto"
           priority
+          fetchPriority="high"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 512px"
+          quality={75}
         />
       </div>
     </Section>
