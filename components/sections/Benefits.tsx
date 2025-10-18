@@ -80,7 +80,7 @@ const Benefits = () => {
           </div>
           <div className="md:col-span-2">
             <Image
-              src="/benefitimg4.png"
+              src="/benefitimg4.webp"
               alt="Benefits of choosing our dental clinic"
               width={335}
               height={335}
