@@ -103,7 +103,7 @@ const Hero = () => {
             <div className="hidden sm:flex flex-col items-center">
               <span className="text-base leading-4 font-semibold">10+</span>
               <span className="text-xs md:text-sm lg:text-base">
-                years of practice
+                years of experience
               </span>
             </div>
           </div>

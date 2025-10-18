@@ -87,6 +87,67 @@
   transition: all ease 0.4s;
 }
 
+/* Hero CTA - Main button with slide-in effect */
+.hero-cta {
+  background-color: var(--color-cta);
+  color: var(--color-text);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--color-cta-hover);
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+/* Trigger main button animation when hovering over the group */
+.group:hover .hero-cta::before {
+  width: 100%;
+}
+
+/* Hero CTA - Arrow circle with slide-in effect */
+.hero-cta-arrow {
+  background-color: var(--color-cta);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-cta-arrow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--color-cta-hover);
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+/* Trigger arrow circle animation when hovering over the group */
+.group:hover .hero-cta-arrow::before {
+  width: 100%;
+}
+
+/* Arrow rotation animation */
+.hero-cta-arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.group:hover .hero-cta-arrow-icon {
+  transform: rotate(-45deg);
+}
+
+
 .testimonial-images > div {
   @apply aspect-square w-6 md:w-9 rounded-full object-cover overflow-hidden;
 }
