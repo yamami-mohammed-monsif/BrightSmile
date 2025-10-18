@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import MenuButton from "../UI/MenuButton";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
@@ -43,10 +44,14 @@ const Header = () => {
         <div className="flex items-center justify-between px-5 md:px-8 lg:px-[100px] pt-4">
           <div>
             <Link href="/">
-              <img
+              <Image
                 src="/logo.png"
+                alt="BrightSmile Dental Logo"
+                width={80}
+                height={80}
                 className="aspect-square w-11 md:w-14 lg:w-20"
-                alt="logo"
+                priority
+                quality={90}
               />
             </Link>
           </div>
