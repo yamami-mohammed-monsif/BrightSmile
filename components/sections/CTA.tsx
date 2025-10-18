@@ -20,7 +20,7 @@ const CTA = () => {
         </div>
         <div className="max-w-[400px] md:absolute right-0 bottom-0 lg:right-20 md:w-[320px] md:h-[380px] lg:w-[433px] lg:h-[487px]">
           <Image
-            src="/cta-img.png"
+            src="/cta-img.webp"
             alt="Happy patient with a bright smile"
             width={500}
             height={500}

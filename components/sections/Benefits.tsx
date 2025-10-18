@@ -53,7 +53,7 @@ const Benefits = () => {
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           <div className="md:row-span-2 lg:w-full">
             <Image
-              src="/benefitimg1.png"
+              src="/benefitimg1.webp"
               alt="Benefits of choosing our dental clinic"
               width={335}
               height={335}
@@ -62,7 +62,7 @@ const Benefits = () => {
           </div>
           <div className="lg:w-full lg:h-[270px]">
             <Image
-              src="/benefitimg2.png"
+              src="/benefitimg2.webp"
               alt="Benefits of choosing our dental clinic"
               width={335}
               height={335}
@@ -71,7 +71,7 @@ const Benefits = () => {
           </div>
           <div className="lg:w-full lg:h-[188px]">
             <Image
-              src="/benefitimg3.png"
+              src="/benefitimg3.webp"
               alt="Benefits of choosing our dental clinic"
               width={335}
               height={335}

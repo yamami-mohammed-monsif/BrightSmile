@@ -10,7 +10,7 @@ const Hero = () => {
           <div className="flex items-center testimonial-images">
             <div className="testimonial-image">
               <Image
-                src="/testimonial1.jpg"
+                src="/testimonial1.webp"
                 alt="Happy patient 1"
                 width={36}
                 height={36}
@@ -20,7 +20,7 @@ const Hero = () => {
             </div>
             <div className="testimonial-image">
               <Image
-                src="/testimonial2.jpg"
+                src="/testimonial2.webp"
                 alt="Happy patient 2"
                 width={36}
                 height={36}
@@ -30,7 +30,7 @@ const Hero = () => {
             </div>
             <div className="testimonial-image">
               <Image
-                src="/testimonial3.jpg"
+                src="/testimonial3.webp"
                 alt="Happy patient 3"
                 width={36}
                 height={36}
@@ -40,7 +40,7 @@ const Hero = () => {
             </div>
             <div className="testimonial-image">
               <Image
-                src="/testimonial4.jpg"
+                src="/testimonial4.webp"
                 alt="Happy patient 4"
                 width={36}
                 height={36}
@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
             <div className="testimonial-image">
               <Image
-                src="/testimonial5.jpg"
+                src="/testimonial5.webp"
                 alt="Happy patient 5"
                 width={36}
                 height={36}
@@ -111,7 +111,7 @@ const Hero = () => {
       </div>
       <div className="flex items-center justify-center">
         <Image
-          src="/hero-image.png"
+          src="/hero-image.webp"
           alt="Dr. Sarah smiling"
           width={600}
           height={700}

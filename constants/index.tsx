@@ -26,7 +26,7 @@ export const TestimonialsData = [
     id: 1,
     name: "Emma R.",
     position: "Position, Company name",
-    img: "/testimonial6.jpg",
+    img: "/testimonial6.webp",
     content:
       "I always covered my mouth when smiling. Thanks to Dr. Sarah and Invisalign, I finally feel confident in photos again.",
   },
@@ -34,7 +34,7 @@ export const TestimonialsData = [
     id: 2,
     name: "Eleena P.",
     position: "Position, Company name",
-    img: "/testimonial5.jpg",
+    img: "/testimonial5.webp",
     content:
       "The clinic feels more like a spa than a dentist’s office. Stress-free and so professional, I actually look forward to visits now.",
   },
@@ -42,7 +42,7 @@ export const TestimonialsData = [
     id: 3,
     name: "Sophia K.",
     position: "Position, Company name",
-    img: "/testimonial1.jpg",
+    img: "/testimonial1.webp",
     content:
       "Whitening gave me amazing results in just one session. The team was gentle, friendly, and explained everything clearly.",
   },
@@ -50,7 +50,7 @@ export const TestimonialsData = [
     id: 4,
     name: "Kiara L.",
     position: "Position, Company name",
-    img: "/testimonial4.jpg",
+    img: "/testimonial4.webp",
     content:
       "I was nervous about getting Invisalign, but Dr. Sarah made the process easy and comfortable. My smile has never looked better!",
   },
@@ -58,7 +58,7 @@ export const TestimonialsData = [
     id: 5,
     name: "Olivia M.",
     position: "Position, Company name",
-    img: "/testimonial5.jpg",
+    img: "/testimonial5.webp",
     content:
       "From the moment I walked in, I felt cared for. The team is attentive and truly listens to your concerns. Highly recommend!",
   },
@@ -67,17 +67,17 @@ export const TestimonialsData = [
 export const BeforeAfterData = [
   {
     id: 1,
-    src: "/beforeafter1.png",
+    src: "/beforeafter1.webp",
     alt: "Before and after treatment image 1",
   },
   {
     id: 2,
-    src: "/beforeafter2.png",
+    src: "/beforeafter2.webp",
     alt: "Before and after treatment image 2",
   },
   {
     id: 3,
-    src: "/beforeafter3.png",
+    src: "/beforeafter3.webp",
     alt: "Before and after treatment image 3",
   },
 ];
