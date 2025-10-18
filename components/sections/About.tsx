@@ -7,7 +7,7 @@ const About = () => {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:grid-rows-2 items-start">
         <div className="relative md:w-[90%] md:row-span-2 md:h-full">
           <Image
-            src="/about-img1.png"
+            src="/about-img1.webp"
             alt="Dr sarah image standing and looking at the camera"
             width={500}
             height={600}
@@ -45,7 +45,7 @@ const About = () => {
         </div>
         <div className="hidden md:block mt-auto">
           <Image
-            src="/about-img2.png"
+            src="/about-img2.webp"
             alt="Dr sarah image"
             width={440}
             height={300}
