@@ -7,9 +7,11 @@ import MenuButton from "../UI/MenuButton";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 import { CalendarDays } from "lucide-react";
+import { useCalendly } from "../CalendlyProvider";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openCalendly } = useCalendly();
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -58,9 +60,12 @@ const Header = () => {
 
           <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-6">
             <DesktopNav />
-            <button className="border flex items-center gap-2 ml-8 px-6 py-3 rounded-full header-cta">
+            <button
+              onClick={openCalendly}
+              className="border flex items-center gap-2 ml-8 px-6 py-3 rounded-full header-cta"
+            >
               <CalendarDays strokeWidth={1.5} />
-              <Link href="/">Book Free Consultation</Link>
+              <Link href="">Book Free Consultation</Link>
             </button>
           </div>
 
