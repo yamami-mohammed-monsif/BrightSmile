@@ -5,9 +5,11 @@ import Step from "../UI/Step";
 import { Steps } from "@/constants";
 import CTABtn from "../UI/CTABtn";
 import useOnScreen from "@/hooks/useOnScreen";
+import { useCalendly } from "../CalendlyProvider";
 
 const Process = () => {
   const [sectionRef, isVisible] = useOnScreen({ threshold: 0.15 });
+  const { openCalendly } = useCalendly();
 
   const getDelayClass = (index: number) => {
     if (index === 0) return "animate-delay-100";
@@ -56,7 +58,9 @@ const Process = () => {
             : "opacity-0 translate-y-6"
         }`}
       >
-        <CTABtn>Book Your Free Smile Consultation Now</CTABtn>
+        <CTABtn onClick={openCalendly}>
+          Book Your Free Smile Consultation Now
+        </CTABtn>
       </div>
     </Section>
   );

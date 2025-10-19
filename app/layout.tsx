@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { CalendlyProvider } from "@/components/CalendlyProvider";
 
 const cormorantgaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -51,7 +52,9 @@ export default function RootLayout({
       <body
         className={`${cormorantgaramond.variable} ${nunitosans.variable} antialiased`}
       >
-        {children}
+        <CalendlyProvider calendlyUrl="https://calendly.com/monsifyamami/30min">
+          {children}
+        </CalendlyProvider>
       </body>
     </html>
   );

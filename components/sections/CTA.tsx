@@ -1,8 +1,12 @@
+"use client";
+
 import Section from "../UI/Section";
 import CTABtn from "../UI/CTABtn";
 import Image from "next/image";
+import { useCalendly } from "../CalendlyProvider";
 
 const CTA = () => {
+  const { openCalendly } = useCalendly();
   return (
     <Section className="bg-primary max-w-7xl mx-auto md:rounded-4xl relative md:mb-20 lg:mb-[100px]">
       <div className="flex flex-col gap-3 md:flex-row items-center">
@@ -15,7 +19,9 @@ const CTA = () => {
             journey today.
           </p>
           <div className="mt-8">
-            <CTABtn>Book Your Free Smile Consultation Now</CTABtn>
+            <CTABtn onClick={openCalendly}>
+              Book Your Free Smile Consultation Now
+            </CTABtn>
           </div>
         </div>
         <div className="max-w-[400px] md:absolute right-0 bottom-0 lg:right-20 md:w-[320px] md:h-[380px] lg:w-[433px] lg:h-[487px]">

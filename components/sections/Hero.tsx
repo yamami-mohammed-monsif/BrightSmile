@@ -1,8 +1,12 @@
+"use client";
+
 import Section from "../UI/Section";
 import CTABtn from "../UI/CTABtn";
 import Image from "next/image";
+import { useCalendly } from "../CalendlyProvider";
 
 const Hero = () => {
+  const { openCalendly } = useCalendly();
   return (
     <Section className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 items-center lg:pb-[100px] lg:pt-10">
       <div>
@@ -74,7 +78,9 @@ const Hero = () => {
           </p>
         </div>
         <div className="mt-8 animate-fade-in-up animate-delay-200">
-          <CTABtn>Book Your Free Smile Consultation Today</CTABtn>
+          <CTABtn onClick={openCalendly}>
+            Book Your Free Smile Consultation Today
+          </CTABtn>
           <div className="flex items-center justify-between mt-4 md:mt-6 lg:mt-12 max-w-2xl animate-fade-in-up animate-delay-300">
             <div className="w-[100px] h-10 lg:w-[150px] lg:h-14">
               <Image

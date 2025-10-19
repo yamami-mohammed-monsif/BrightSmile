@@ -6,10 +6,12 @@ import FAQItem from "../UI/FAQItem";
 import { useState } from "react";
 import CTABtn from "../UI/CTABtn";
 import useOnScreen from "@/hooks/useOnScreen";
+import { useCalendly } from "../CalendlyProvider";
 
 const FAQs = () => {
   const [openId, setOpenId] = useState<number | null>(null);
   const [sectionRef, isVisible] = useOnScreen({ threshold: 0.15 });
+  const { openCalendly } = useCalendly();
 
   const handleToggle = (id: number) => {
     setOpenId((prev: number | null) => (prev === id ? null : id));
@@ -42,7 +44,9 @@ const FAQs = () => {
       <div className="mt-6 md:mt-8 lg:mt-10">
         <h3 className="mb-6">Still have questions?</h3>
         <div>
-          <CTABtn>Book Your Free Smile Consultation Today</CTABtn>
+          <CTABtn onClick={openCalendly}>
+            Book Your Free Smile Consultation Today
+          </CTABtn>
         </div>
       </div>
     </Section>

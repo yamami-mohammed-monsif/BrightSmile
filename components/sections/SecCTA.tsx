@@ -3,8 +3,10 @@
 import Section from "../UI/Section";
 import CTABtn from "../UI/CTABtn";
 import useOnScreen from "@/hooks/useOnScreen";
+import { useCalendly } from "../CalendlyProvider";
 
 const SecCTA = () => {
+  const { openCalendly } = useCalendly();
   const [sectionRef, isVisible] = useOnScreen({ threshold: 0.15 });
   return (
     <Section ref={sectionRef} className="bg-secondary">
@@ -29,7 +31,9 @@ const SecCTA = () => {
               : "opacity-0 translate-y-6"
           }`}
         >
-          <CTABtn>Book Your Free Smile Consultation Now</CTABtn>
+          <CTABtn onClick={openCalendly}>
+            Book Your Free Smile Consultation Now
+          </CTABtn>
         </div>
       </div>
     </Section>
