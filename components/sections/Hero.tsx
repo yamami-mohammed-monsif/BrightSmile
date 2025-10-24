@@ -8,7 +8,7 @@ import { useCalendly } from "../CalendlyProvider";
 const Hero = () => {
   const { openCalendly } = useCalendly();
   return (
-    <Section className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 items-center lg:pb-[100px] lg:pt-10">
+    <Section className="bg-soft-white grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 items-center lg:pb-[100px] lg:pt-10">
       <div>
         <div className="flex items-center gap-1 mb-3">
           <div className="flex items-center testimonial-images">
