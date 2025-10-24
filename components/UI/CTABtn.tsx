@@ -18,7 +18,7 @@ const CTABtn = ({ children, className, onClick }: CTAProps) => {
         {children}
       </button>
       <div className="hidden sm:flex items-center justify-center w-12 h-12 rounded-full hero-cta-arrow -ml-1 cursor-pointer">
-        <ArrowRight size={20} className="text-text hero-cta-arrow-icon" />
+        <ArrowRight size={20} className="text-white hero-cta-arrow-icon" />
       </div>
     </div>
   );

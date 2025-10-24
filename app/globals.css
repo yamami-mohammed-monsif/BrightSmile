@@ -2,8 +2,8 @@
 
 @theme {
   --color-text: #333333;
-  --color-cta: #4db6ac;
-  --color-cta-hover: #3aa296;
+  --color-cta: #00796B;
+  --color-cta-hover: #399b91;
   --color-light-grey: #f9f9f9;
   --color-primary: #a8e6cf;
   --color-secondary: #e0f7fa;
@@ -90,7 +90,7 @@
 /* Hero CTA - Main button with slide-in effect */
 .hero-cta {
   background-color: var(--color-cta);
-  color: var(--color-text);
+  color: white;
   position: relative;
   overflow: hidden;
   z-index: 1;
