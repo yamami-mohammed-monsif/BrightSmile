@@ -30,7 +30,7 @@ const FAQs = () => {
           before starting their smile journey.
         </p>
       </div>
-      <div>
+      <div className="w-full md:w-[75%] mx-auto">
         {FAQData.map((faq) => (
           <FAQItem
             key={faq.id}
