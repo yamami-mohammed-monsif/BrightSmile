@@ -60,7 +60,7 @@ const Benefits = () => {
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
-          <div className="lg:w-full lg:h-[270px]">
+          <div className="lg:w-full lg:h-full">
             <Image
               src="/benefitimg2.webp"
               alt="Benefits of choosing our dental clinic"
@@ -69,18 +69,9 @@ const Benefits = () => {
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
-          <div className="lg:w-full lg:h-[188px]">
+          <div className="lg:w-full lg:h-full">
             <Image
               src="/benefitimg3.webp"
-              alt="Benefits of choosing our dental clinic"
-              width={335}
-              height={335}
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="md:col-span-2">
-            <Image
-              src="/benefitimg4.webp"
               alt="Benefits of choosing our dental clinic"
               width={335}
               height={335}
