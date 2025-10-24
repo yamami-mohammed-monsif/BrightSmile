@@ -41,14 +41,6 @@ const FAQs = () => {
           />
         ))}
       </div>
-      <div className="mt-6 md:mt-8 lg:mt-10">
-        <h3 className="mb-6">Still have questions?</h3>
-        <div>
-          <CTABtn onClick={openCalendly}>
-            Book Your Free Smile Consultation Today
-          </CTABtn>
-        </div>
-      </div>
     </Section>
   );
 };
